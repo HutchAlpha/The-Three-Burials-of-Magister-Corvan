@@ -2376,7 +2376,6 @@ $(document).on('shown.sm.passage', function (event, passage) {
     window.scrollTo(0, scrollPos);
   }
 });
-
 </script><tw-tag name="INTERFACE" color="green"></tw-tag><tw-tag name="ENDING" color="red"></tw-tag><tw-tag name="NEXUS" color="purple"></tw-tag><tw-tag name="TEMP" color="yellow"></tw-tag><tw-tag name="Admin" color="red"></tw-tag><tw-tag name="ZoneNotes" color="green"></tw-tag><tw-tag name="CodeJeux" color="purple"></tw-tag><tw-tag name="test" color="orange"></tw-tag><tw-passagedata pid="1" name="Deroule" tags="" position="3700,5075" size="100,100">START
 Buried in cemetery
 
@@ -2545,7 +2544,7 @@ document.getElementById(&#39;activateSound&#39;).addEventListener(&#39;click&#39
         &quot;rare&quot;: &quot;Common&quot;
     },
     {
-        id: &quot;soin1&quot;,
+        id: &quot;soin2&quot;,
         nom: &quot;Health Pills&quot;,
         type: &quot;soin&quot;,
         life: -5,
@@ -2626,6 +2625,38 @@ document.getElementById(&#39;activateSound&#39;).addEventListener(&#39;click&#39
   });
 &lt;/script&gt;
 
+&lt;script&gt;
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem(&quot;characterUnlocked&quot;) === &quot;true&quot;;
+        const characterButton = document.querySelector(&#39;.nav-btn[data-panel=&quot;skills&quot;]&#39;);
+        const elementsToHide = document.querySelectorAll(&#39;.top-nav, .xp-container, .classinventory&#39;);
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove(&quot;disabled-btn&quot;);
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add(&quot;disabled-btn&quot;);
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el =&gt; {
+            el.style.display = characterUnlocked ? &quot;&quot; : &quot;none&quot;;
+        });
+    }
+
+    // Met à jour l&#39;état de l&#39;UI à chaque changement de passage
+    $(document).on(&#39;:passagerender&#39;, function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+&lt;/script&gt;
+
 ...But your blurry eyes see (text-style:&quot;blur&quot;)[NOTHING].
 You awaken from what seems to be a very long nap. Everything is still pitch black and you realise that you are not in your bed. You are lying on a wooden floor.
 When you try to get up, you bump your head against an other plank of wood. 
@@ -2651,31 +2682,30 @@ What? But who [[the hell|Classes]] are you, then?
     (stop:)
 (if: $intelligence &gt;= $diceRoll)
     [
-His grunt echoes. “Corvan, you say? Well… Right… I’ll get you out, m’lord.”  
-He hums in satisfaction and begins prying the lid free: **for free of course, for you, Magister...**  
-With a grunt, he heaves at the coffin lid.  
-*The wood splinters… and he recoils with a yelp.*  
-**Brannon:** “But… you’re bloody not him!”  
+  His grunt echoes. “Corvan, you say? Well… Right… I’ll get you out, m’lord.”  
+  He hums in satisfaction and begins prying the lid free: **for free of course, for you, Magister...**  
+  With a grunt, he heaves at the coffin lid.  
+  *The wood splinters… and he recoils with a yelp.*  
+  **Brannon:** “But… you’re bloody not him!”  
 
-* [[Stammer an excuse|CorvanDeceptionExplain]]  
-* [[Stay silent and hope he forgets|CorvanDeceptionSilent]]
-(set:$fakeCorvan to true)
-    ]
-(else:)
-    [
-**Brannon (from above):** “Corvan? Don’t make me laugh. I can’t even see your face: just a pair of boots poking out of the dirt!”  
-He pauses, shovel in hand, and the earth rumbles as he shifts his weight.  
-**Brannon:** “If you’re truly the great Magister, speak plain: where’s your bone-white cloak? I’d know his gait from a mile off.”  
-* [[Apologize and tell who you really are|Classes]]  
-* [[Remain silent and face his wrath|GameOverStarve]]
-    ]
-]
-
-
+  * [[Stammer an excuse|CorvanDeceptionExplain]]  
+  * [[Stay silent and hope he forgets|CorvanDeceptionSilent]]
+  (set:$fakeCorvan to true)
+      ]
+  (else:)
+      [
+  **Brannon (from above):** “Corvan? Don’t make me laugh. I can’t even see your face: just a pair of boots poking out of the dirt!”  
+  He pauses, shovel in hand, and the earth rumbles as he shifts his weight.  
+  **Brannon:** “If you’re truly the great Magister, speak plain: where’s your bone-white cloak? I’d know his gait from a mile off.”  
+  * [[Apologize and tell who you really are|Classes]]  
+  * [[Remain silent and face his wrath|GameOverStarve]]
+      ]
+  ]
 ]
 </tw-passagedata><tw-passagedata pid="4" name="stats" tags="startup" position="1825,525" size="100,100">{
 (set: $currentEnding to 0)
 (set:$endingNumbers to 35)
+
 (set: $heroName to &quot;Frederick Anderson&quot;)
 (set: $heroNameGravebinder to &quot;Master Lorcan Vale&quot;)
 (set: $heroNameLanternBearer to &quot;Sister Ailith Mara&quot;)
@@ -2683,6 +2713,16 @@ He pauses, shovel in hand, and the earth rumbles as he shifts his weight.
 (set: $heroNameWhispered to &quot;Marek Slayne&quot;)
 (set: $heroNamePaleScholar to &quot;Lady Thyrenia Arkwright&quot;)
 (set: $heroNameExhumed to &quot;Garron Fletch&quot;)
+
+(set: $strength to 10)
+(set: $intelligence to 10)
+(set: $luck to 10)
+(set: $charisma to 10)
+(set: $basestrength to 10)
+(set: $baseintelligence to 10)
+(set: $baseluck to 10)
+(set: $basecharisma to 10)
+
 (set:$fakeCorvan to false)
 (set: $MagisterHeart to false)
 (set: $journal to (a: &quot;Diary of&quot;))
@@ -2697,26 +2737,26 @@ He pauses, shovel in hand, and the earth rumbles as he shifts his weight.
 (set: $health to 100)
 (set: $maxHealth to 100)
 
-(set: $strength to 10)
-(set: $intelligence to 10)
-(set: $luck to 10)
-(set: $charisma to 10)
-
-(set: $CorvanQuest to false)
-
-(set: $basestrength to 10)
-(set: $baseintelligence to 10)
-(set: $baseluck to 10)
-(set: $basecharisma to 10)
 (set: $hasBroom to false)
 (set: $broom to 0)
 (set: $medKit to 0)
-
+(set: $health to 100)
+(set: $maxHealth to 100)
 (set: $atkBonus to 5) &lt;!--change depending on class--&gt;
+
+(set: $CorvanQuest to false)
 
 (set: $xp to 0)
 (set: $pointExp to 5)
-(set: $money to 25)
+(set: $LvlXp to 1)
+(set: $levelThreshold to 10)
+(set: $xpLevelIndex to 0)
+
+
+(set: $money to 1500)
+(set:$skillCheckEnable to true)
+
+(set: $abandonCrewMate to false)
 
 (set: $hasClaws to false)
 (set: $hasAmulet to false)
@@ -2728,14 +2768,14 @@ He pauses, shovel in hand, and the earth rumbles as he shifts his weight.
 (set: $alienSarah to false)
 (set: $forestBeast to false)
 (set: $spiderFight to false)
+(set: $pirateFight to false)
 (set: $caveCreature to false)
 
 (set:$hasBeenPlanet1 to false)
 
+(set:$endingNumbers to 54)
 
-
-(set:$pointExp to 0)
-
+(set: $currentLoop to 1)
 
 
 &lt;script&gt;
@@ -5766,8 +5806,8 @@ After some reflection on how you got here - all the mistakes and regrets that fo
   An iron archway entombs a rusted gate locked by a massive bone key. Overgrown tombstones lean in silent rows, and moonlight filters through gnarled branches to guide: or warn: every traveler.  
   
 Or… [[Wait until night falls and see another side of Velthorn Hollow|NightVelthornHollowOrientation]]
-&lt;p&gt;
-Where will you venture first?  
+
+&lt;p&gt;Where will you venture first?  &lt;/p&gt;
 
 
 </tw-passagedata><tw-passagedata pid="24" name="RestartDonnee" tags="" position="2300,575" size="100,100">&lt;!--

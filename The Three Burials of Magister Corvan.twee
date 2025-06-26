@@ -10345,7 +10345,7 @@ document.getElementById('activateSound').addEventListener('click', function() {
         "rare": "Common"
     },
     {
-        id: "soin1",
+        id: "soin2",
         nom: "Health Pills",
         type: "soin",
         life: -5,
@@ -10426,6 +10426,38 @@ document.getElementById('activateSound').addEventListener('click', function() {
   });
 </script>
 
+<script>
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem("characterUnlocked") === "true";
+        const characterButton = document.querySelector('.nav-btn[data-panel="skills"]');
+        const elementsToHide = document.querySelectorAll('.top-nav, .xp-container, .classinventory');
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove("disabled-btn");
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add("disabled-btn");
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el => {
+            el.style.display = characterUnlocked ? "" : "none";
+        });
+    }
+
+    // Met à jour l'état de l'UI à chaque changement de passage
+    $(document).on(':passagerender', function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+</script>
+
 ...But your blurry eyes see (text-style:"blur")[NOTHING].
 You awaken from what seems to be a very long nap. Everything is still pitch black and you realise that you are not in your bed. You are lying on a wooden floor.
 When you try to get up, you bump your head against an other plank of wood. 
@@ -10451,27 +10483,25 @@ What? But who [[the hell|Classes]] are you, then?
     (stop:)
 (if: $intelligence >= $diceRoll)
     [
-His grunt echoes. “Corvan, you say? Well… Right… I’ll get you out, m’lord.”  
-He hums in satisfaction and begins prying the lid free: **for free of course, for you, Magister...**  
-With a grunt, he heaves at the coffin lid.  
-*The wood splinters… and he recoils with a yelp.*  
-**Brannon:** “But… you’re bloody not him!”  
+  His grunt echoes. “Corvan, you say? Well… Right… I’ll get you out, m’lord.”  
+  He hums in satisfaction and begins prying the lid free: **for free of course, for you, Magister...**  
+  With a grunt, he heaves at the coffin lid.  
+  *The wood splinters… and he recoils with a yelp.*  
+  **Brannon:** “But… you’re bloody not him!”  
 
-* [[Stammer an excuse|CorvanDeceptionExplain]]  
-* [[Stay silent and hope he forgets|CorvanDeceptionSilent]]
-(set:$fakeCorvan to true)
-    ]
-(else:)
-    [
-**Brannon (from above):** “Corvan? Don’t make me laugh. I can’t even see your face: just a pair of boots poking out of the dirt!”  
-He pauses, shovel in hand, and the earth rumbles as he shifts his weight.  
-**Brannon:** “If you’re truly the great Magister, speak plain: where’s your bone-white cloak? I’d know his gait from a mile off.”  
-* [[Apologize and tell who you really are|Classes]]  
-* [[Remain silent and face his wrath|GameOverStarve]]
-    ]
-]
-
-
+  * [[Stammer an excuse|CorvanDeceptionExplain]]  
+  * [[Stay silent and hope he forgets|CorvanDeceptionSilent]]
+  (set:$fakeCorvan to true)
+      ]
+  (else:)
+      [
+  **Brannon (from above):** “Corvan? Don’t make me laugh. I can’t even see your face: just a pair of boots poking out of the dirt!”  
+  He pauses, shovel in hand, and the earth rumbles as he shifts his weight.  
+  **Brannon:** “If you’re truly the great Magister, speak plain: where’s your bone-white cloak? I’d know his gait from a mile off.”  
+  * [[Apologize and tell who you really are|Classes]]  
+  * [[Remain silent and face his wrath|GameOverStarve]]
+      ]
+  ]
 ]
 
 
@@ -11280,8 +11310,8 @@ Here we are ! And here are a list of all the wonderful things to discover in thi
   An iron archway entombs a rusted gate locked by a massive bone key. Overgrown tombstones lean in silent rows, and moonlight filters through gnarled branches to guide: or warn: every traveler.  
   
 Or… [[Wait until night falls and see another side of Velthorn Hollow|NightVelthornHollowOrientation]]
-<p>
-Where will you venture first?  
+
+<p>Where will you venture first?  </p>
 
 
 
@@ -14444,6 +14474,7 @@ function renderInventory(items) {
 {
 (set: $currentEnding to 0)
 (set:$endingNumbers to 35)
+
 (set: $heroName to "Frederick Anderson")
 (set: $heroNameGravebinder to "Master Lorcan Vale")
 (set: $heroNameLanternBearer to "Sister Ailith Mara")
@@ -14451,6 +14482,16 @@ function renderInventory(items) {
 (set: $heroNameWhispered to "Marek Slayne")
 (set: $heroNamePaleScholar to "Lady Thyrenia Arkwright")
 (set: $heroNameExhumed to "Garron Fletch")
+
+(set: $strength to 10)
+(set: $intelligence to 10)
+(set: $luck to 10)
+(set: $charisma to 10)
+(set: $basestrength to 10)
+(set: $baseintelligence to 10)
+(set: $baseluck to 10)
+(set: $basecharisma to 10)
+
 (set:$fakeCorvan to false)
 (set: $MagisterHeart to false)
 (set: $journal to (a: "Diary of"))
@@ -14465,26 +14506,26 @@ function renderInventory(items) {
 (set: $health to 100)
 (set: $maxHealth to 100)
 
-(set: $strength to 10)
-(set: $intelligence to 10)
-(set: $luck to 10)
-(set: $charisma to 10)
-
-(set: $CorvanQuest to false)
-
-(set: $basestrength to 10)
-(set: $baseintelligence to 10)
-(set: $baseluck to 10)
-(set: $basecharisma to 10)
 (set: $hasBroom to false)
 (set: $broom to 0)
 (set: $medKit to 0)
-
+(set: $health to 100)
+(set: $maxHealth to 100)
 (set: $atkBonus to 5) <!--change depending on class-->
+
+(set: $CorvanQuest to false)
 
 (set: $xp to 0)
 (set: $pointExp to 5)
-(set: $money to 25)
+(set: $LvlXp to 1)
+(set: $levelThreshold to 10)
+(set: $xpLevelIndex to 0)
+
+
+(set: $money to 1500)
+(set:$skillCheckEnable to true)
+
+(set: $abandonCrewMate to false)
 
 (set: $hasClaws to false)
 (set: $hasAmulet to false)
@@ -14496,14 +14537,14 @@ function renderInventory(items) {
 (set: $alienSarah to false)
 (set: $forestBeast to false)
 (set: $spiderFight to false)
+(set: $pirateFight to false)
 (set: $caveCreature to false)
 
 (set:$hasBeenPlanet1 to false)
 
+(set:$endingNumbers to 54)
 
-
-(set:$pointExp to 0)
-
+(set: $currentLoop to 1)
 
 
 <script>
@@ -14607,7 +14648,6 @@ $(document).on('shown.sm.passage', function (event, passage) {
     window.scrollTo(0, scrollPos);
   }
 });
-
 
 
 :: StoryStylesheet [stylesheet]
