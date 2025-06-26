@@ -18,8 +18,12 @@ The Three Burials of Magister Corvan
     "CodeJeux": "purple",
     "test": "orange"
   },
-  "zoom": 0.6
+  "zoom": 0.3
 }
+
+
+:: (str:$Link) {"position":"1575,775","size":"100,100"}
+
 
 
 :: Admin [Admin] {"position":"900,0","size":"200,100"}
@@ -6334,6 +6338,64 @@ He glances at your steady stance and offers a crooked smile. “Word is, the lan
 (set:$xpDeath to 300)
 }
 (display:"MacroPassage")
+
+
+:: MacroPassage {"position":"1575,650","size":"100,100"}
+$introText
+(click:(str:$clickTest))[
+(display:"diceRollMacro")
+
+ (live: 3s)[
+    (stop:)
+(if: $AttributeTest >= $diceRoll)
+    [$SuccessText
+    {
+    * [[(str:$LinkText)|(str:$Link)]]
+    <script>
+
+	setTimeout(() => {
+ 	 gainXp($xpSuccess);
+	}, "1000");
+	</script>
+	}
+    ]
+(else:)
+    [
+    $FailureText
+    (click:(str:$clickDamage))[
+    (if:$damageType is 1)[(display:"Roll1D")]
+    (else:)[(display:"Roll2D")]
+
+ (live: 3s)[
+    (stop:)
+You lost (str:$diceRoll) health points
+(set:$health to it - $diceRoll)
+(if:$health<=0)[
+ $DeathText
+(display:"RestartDonnee")
+{
+<script>
+setTimeout(() => {
+  gainXp($xpDeath);
+}, "1000");
+</script>
+}
+]
+(else:)[
+   * [[(str:$FailureLinkText)|(str:$Link)]]
+{
+<script>
+setTimeout(() => {
+  gainXp($xpFailure);
+}, "1000");
+</script>
+}
+ ]
+ ]
+ ]
+]
+ ]
+ ]
 
 
 :: MainQuest {"position":"4050,775","size":"100,200"}
