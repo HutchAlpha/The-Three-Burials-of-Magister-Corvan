@@ -18,7 +18,7 @@ The Three Burials of Magister Corvan
     "CodeJeux": "purple",
     "test": "orange"
   },
-  "zoom": 0.3
+  "zoom": 0.6
 }
 
 
@@ -1962,13 +1962,16 @@ Twelve statues stand in a half-circle. Each bears the imagery of a past life: a 
 
 :: Classes {"position":"2725,825","size":"100,100"}
 <h1> <center>Choose your class... </center></h1><br>
+
+
 <div class="character-info">
   <h2 class="character-title">Gravebinder</h2>
   <div class="character-rangement">
-    <div class="character-portrait"><img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/GraveBinder.png"></div>
+    <div class="character-portrait">
+    <img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/GraveBinder.png"></div>
 
     <div class="character-description">
-You are $heroNameGravebinder, once the chief ritualist at the Silent Orders. In life, you oversaw the binding of restless spirits, but hesitation during your final rite cost you everything. Betrayed by the very chains you commanded, your heart gave out. They sealed you inside an rotten coffin, thinking to contain your cursed soul. But something stirred beneath the lid. When your eyes flutter open, the world smells of dust and sorrow: and the chains now answer only to you.
+<p>You are $heroNameGravebinder, once the chief ritualist at the Silent Orders. In life, you oversaw the binding of restless spirits, but hesitation during your final rite cost you everything. Betrayed by the very chains you commanded, your heart gave out. They sealed you inside an rotten coffin, thinking to contain your cursed soul. But something stirred beneath the lid. When your eyes flutter open, the world smells of dust and sorrow: and the chains now answer only to you.</p>
 (click:"Master Lorcan Vale")[
 (set: $heroNameGravebinder to (prompt: "Do you want to change the name ?","Master Lorcan Vale", ))
 (set: $heroName to $heroNameGravebinder)
@@ -1976,14 +1979,25 @@ You are $heroNameGravebinder, once the chief ritualist at the Silent Orders. In 
     <span class="twine-link">[[Play as a Gravebinder]]</span>
     </div>
     </div>
-  </div>
 
-    <div class="character-info">
+  <!-- Présentation des SKILLS -->
+  <div class="character-stats">
+    <ul class="presCompetences">
+      <li>Strength : <span id="stat-strength">15</span></li>
+      <li>Intelligence : <span id="stat-intelligence">6</span></li>
+      <li>Luck : <span id="stat-luck">10</span></li>
+      <li>Charisma : <span id="stat-charisma">10</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="character-info">
   <h2 class="character-title">A Lantern Bearer</h2>
     <div class="character-rangement">
-    <div class="character-portrait"><img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Lantern.png"></div>
+    <div class="character-portrait">
+    <img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Lantern.png"></div>
     <div class="character-description">
-You were $heroNameLanternBearer, keeper of the Lantern of True Dawn. When the Red Fog descended, you stayed behind to comfort the dying: and joined their number. They entombed you in, hoping your spirit would find peace. But as the centuries passed, the light within your lantern refused to extinguish. Now, as you push open the heavy lid, the pale flame sputters to life once more, guiding your first uncertain steps back into a ruined world.
+<p>You were $heroNameLanternBearer, keeper of the Lantern of True Dawn. When the Red Fog descended, you stayed behind to comfort the dying: and joined their number. They entombed you in, hoping your spirit would find peace. But as the centuries passed, the light within your lantern refused to extinguish. Now, as you push open the heavy lid, the pale flame sputters to life once more, guiding your first uncertain steps back into a ruined world.</p>
 (click:"Sister Ailith Mara")[
 (set: $heroNameLanternBearer to (prompt: "Do you want to change the name ?","Sister Ailith Mara", ))
 (set: $heroName to $heroNameLanternBearer)
@@ -1992,14 +2006,25 @@ You were $heroNameLanternBearer, keeper of the Lantern of True Dawn. When the Re
     <span class="twine-link">[[Play as a Lantern Bearer]]</span>
     </div>
     </div>
+    
+    <!-- Présentation des SKILLS -->
+  <div class="character-stats">
+    <ul class="presCompetences">
+      <li>Strength : <span id="stat-strength">15</span></li>
+      <li>Intelligence : <span id="stat-intelligence">6</span></li>
+      <li>Luck : <span id="stat-luck">10</span></li>
+      <li>Charisma : <span id="stat-charisma">10</span></li>
+    </ul>
+  </div>
   </div>
 
     <div class="character-info">
   <h2 class="character-title">An Ossuary Knight</h2>
     <div class="character-rangement">
-    <div class="character-portrait"><img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Knight.png"></div>
+    <div class="character-portrait">
+    <img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Knight.png"></div>
     <div class="character-description">
-$heroNameOssuaryKnight, fallen hero of the Ash Wars. Cut down by a cursed blade, your final honors were grim: a tomb of rotten pelts of some dead creatures, your armor rusted shut around you. Yet no grave could hold your iron will forever. Now, with a groan of rusted hinges and crumbling stone, you push, trying to shove aside your coffin's heavy lid. The world needs its knight once more: even if the sun will never rise again on your battered shield.
+<p>$heroNameOssuaryKnight, fallen hero of the Ash Wars. Cut down by a cursed blade, your final honors were grim: a tomb of rotten pelts of some dead creatures, your armor rusted shut around you. Yet no grave could hold your iron will forever. Now, with a groan of rusted hinges and crumbling stone, you push, trying to shove aside your coffin's heavy lid. The world needs its knight once more: even if the sun will never rise again on your battered shield.</p>
 (click:"Rourke Belgrave")[
 (set: $heroNameOssuaryKnight to (prompt: "Do you want to change the name ?","Rourke Belgrave", ))
 (set: $heroName to $heroNameOssuaryKnight)
@@ -2007,14 +2032,25 @@ $heroNameOssuaryKnight, fallen hero of the Ash Wars. Cut down by a cursed blade,
     <span class="twine-link">[[Play as an Ossuary Knight]]</span>
     </div>
     </div>
+    
+    <!-- Présentation des SKILLS -->
+  <div class="character-stats">
+    <ul class="presCompetences">
+      <li>Strength : <span id="stat-strength">15</span></li>
+      <li>Intelligence : <span id="stat-intelligence">6</span></li>
+      <li>Luck : <span id="stat-luck">10</span></li>
+      <li>Charisma : <span id="stat-charisma">10</span></li>
+    </ul>
+  </div>
   </div>
 
     <div class="character-info">
   <h2 class="character-title">A Whispered</h2>
     <div class="character-rangement">
-    <div class="character-portrait"><img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Whispered.png"></div>
+    <div class="character-portrait">
+    <img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Whispered.png"></div>
     <div class="character-description">
-You were $heroNameWhispered, once a silent blade for the Pale Court. When your masters turned against you, your betrayal was swift and merciless. They disposed of your body in a shallow grave... but the secrets you carried rooted deep into your restless soul. Now, blinking against the faint, rotten light, you push your way free from a cracked, hastily-nailed coffin. Your fingers find your dagger even before your mind remembers your name. There is still work to do in this broken world.
+<p>You were $heroNameWhispered, once a silent blade for the Pale Court. When your masters turned against you, your betrayal was swift and merciless. They disposed of your body in a shallow grave... but the secrets you carried rooted deep into your restless soul. Now, blinking against the faint, rotten light, you push your way free from a cracked, hastily-nailed coffin. Your fingers find your dagger even before your mind remembers your name. There is still work to do in this broken world.</p>
 (click:"Marek Slayne")[
 (set: $heroNameWhispered to (prompt: "Do you want to change the name ?","Marek Slayne", ))
 (set: $heroName to $heroNameWhispered)
@@ -2022,14 +2058,25 @@ You were $heroNameWhispered, once a silent blade for the Pale Court. When your m
     <span class="twine-link">[[Play as a Whispered]]</span>
     </div>
     </div>
+    
+    <!-- Présentation des SKILLS -->
+  <div class="character-stats">
+    <ul class="presCompetences">
+      <li>Strength : <span id="stat-strength">15</span></li>
+      <li>Intelligence : <span id="stat-intelligence">6</span></li>
+      <li>Luck : <span id="stat-luck">10</span></li>
+      <li>Charisma : <span id="stat-charisma">10</span></li>
+    </ul>
+  </div>
   </div>
 
     <div class="character-info">
   <h2 class="character-title">A Pale Scholar</h2>
     <div class="character-rangement">
-    <div class="character-portrait"><img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Scholar.png"></div>
+    <div class="character-portrait">
+    <img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Scholar.png"></div>
     <div class="character-description">
-$heroNamePaleScholar, last of the Archivists of Erelith. You sought forbidden knowledge and found something deeper: death beyond death. They buried you with your grim tomes clutched to your chest, a precaution against the curses sewn into your bones. Yet when your eyes flicker open in your cramped coffin, the runes carved into the wood begin to weep ink, as if welcoming you home. You are now awake, scholar no longer: a living relic, desperate to rewrite your fate.
+<p>$heroNamePaleScholar, last of the Archivists of Erelith. You sought forbidden knowledge and found something deeper: death beyond death. They buried you with your grim tomes clutched to your chest, a precaution against the curses sewn into your bones. Yet when your eyes flicker open in your cramped coffin, the runes carved into the wood begin to weep ink, as if welcoming you home. You are now awake, scholar no longer: a living relic, desperate to rewrite your fate.</p>
 (click:"Lady Thyrenia Arkwright")[
 (set: $heroNamePaleScholar to (prompt: "Do you want to change the name ?","Lady Thyrenia Arkwright", ))
 (set: $heroName to $heroNamePaleScholar)
@@ -2037,14 +2084,26 @@ $heroNamePaleScholar, last of the Archivists of Erelith. You sought forbidden kn
     <span class="twine-link">[[Play as a Pale Scholar]]</span>
     </div>
     </div>
+   
+    <!-- Présentation des SKILLS -->
+  <div class="character-stats">
+    <ul class="presCompetences">
+      <li>Strength : <span id="stat-strength">15</span></li>
+      <li>Intelligence : <span id="stat-intelligence">6</span></li>
+      <li>Luck : <span id="stat-luck">10</span></li>
+      <li>Charisma : <span id="stat-charisma">10</span></li>
+    </ul>
   </div>
+  </div>
+
 
     <div class="character-info">
   <h2 class="character-title">An Exhumed</h2>
     <div class="character-rangement">
-    <div class="character-portrait"><img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Exhumed.png"></div>
+    <div class="character-portrait">
+    <img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Exhumed.png"></div>
     <div class="character-description">
-You were $heroNameExhumed, condemned criminal, test subject of a forgotten experiment. Death came slowly, but not completely. The wardens buried you in a nameless grave, bound with iron nails and cursed chains. Yet the experiment refused to end. Now, you are awake, and this world, whatever it is, will snap apart under your fists. Your muscles ache with unnatural hunger as somewhere deep in your fractured mind, you know this is just the beginning of your true sentence.
+<p>You were $heroNameExhumed, condemned criminal, test subject of a forgotten experiment. Death came slowly, but not completely. The wardens buried you in a nameless grave, bound with iron nails and cursed chains. Yet the experiment refused to end. Now, you are awake, and this world, whatever it is, will snap apart under your fists. Your muscles ache with unnatural hunger as somewhere deep in your fractured mind, you know this is just the beginning of your true sentence.</p>
 (click:"Garron Fletch")[
 (set: $heroNameExhumed to (prompt: "Do you want to change the name ?","Garron Fletch", ))
 (set: $heroName to $heroNameExhumed)
@@ -2052,7 +2111,19 @@ You were $heroNameExhumed, condemned criminal, test subject of a forgotten exper
     <span class="twine-link">[[Play as an Exhumed]]</span>
     </div>
     </div>
+    
+    <!-- Présentation des SKILLS -->
+  <div class="character-stats">
+    <ul class="presCompetences">
+      <li>Strength : <span id="stat-strength">15</span></li>
+      <li>Intelligence : <span id="stat-intelligence">6</span></li>
+      <li>Luck : <span id="stat-luck">10</span></li>
+      <li>Charisma : <span id="stat-charisma">10</span></li>
+    </ul>
   </div>
+  </div>
+
+
 
     <p class="note">This decision is yours, remember you can always restart the game with another character at anytime. To restart or save the game, click on the 'options' button. If you made an account, you will be able to save the game on your profile and be in our leaderboard.</p>
 
@@ -2062,10 +2133,20 @@ You were $heroNameExhumed, condemned criminal, test subject of a forgotten exper
     <div class="character-rangement">
     <div class="character-portrait"><img class="ImgCharacter" src= "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/"></div>
     <div class="character-description">
-But your name could lead you to a better destiny, should you choose it :
+<p>But your name could lead you to a better destiny, should you choose it :<p>
     <span class="twine-link">[[Play a god]]</span>
     </div>
     </div>
+    
+    <!-- Présentation des SKILLS -->
+  <div class="character-stats">
+    <ul class="presCompetences">
+      <li>Strength : <span id="stat-strength">15</span></li>
+      <li>Intelligence : <span id="stat-intelligence">6</span></li>
+      <li>Luck : <span id="stat-luck">10</span></li>
+      <li>Charisma : <span id="stat-charisma">10</span></li>
+    </ul>
+  </div>
   </div>
 ]
 
@@ -4150,7 +4231,7 @@ You stand before the armored door etched with three loops. A keyhole glows faint
 * [[Study the sigil|CryptStudyVaultSigil]]
 
 
-:: Damage {"position":"2625,150","size":"100,100"}
+:: Damage {"position":"1700,775","size":"100,100"}
 (click:"")[
 (display:"Roll2D")
 
@@ -5103,7 +5184,7 @@ He muters some words, smiles, and then you fell weak. You fall to the ground and
 ]
 
 
-:: ExhumedThreaten {"position":"3050,1700","size":"100,100"}
+:: ExhumedThreaten {"position":"3175,1700","size":"100,100"}
 **You:** You glare with a corpse’s hunger.  
 He shudders. “All right: Your word that you will help me dig out ol'Corvan and five shards, or I run!”  
 * [[Pay the five shards and agree to help|PayKnightFee]]  
@@ -5544,7 +5625,7 @@ setTimeout(() => {
  ]
 
 
-:: HaggleKnight {"position":"3125,725","size":"100,100"}
+:: HaggleKnight {"position":"3350,725","size":"100,100"}
 \:: HaggleKnight
 **You:** “Surely an Ossuary Knight’s service is worth less?”  
 **Brannon:** “Worth more! I’ll do it for eight, plus your help: take it or leave it.”  
@@ -9243,7 +9324,7 @@ You ignite the censer’s fumes: a backdraft roars through the chamber, engulfin
 
 
 
-:: PayForLight {"position":"3100,575","size":"100,100"}
+:: PayForLight {"position":"3300,525","size":"100,100"}
 (if: $money >= 1)[
   (set: $money to it - 1)
   **You:** “Anything you want, the silver, the body... just get me out of here!”
@@ -9258,7 +9339,7 @@ You ignite the censer’s fumes: a backdraft roars through the chamber, engulfin
 ]
 
 
-:: PayKnightFee {"position":"3275,625","size":"100,100"}
+:: PayKnightFee {"position":"3500,625","size":"100,100"}
 (if: $money >= 5)[
   (set: $money to it - 5)
   **Brannon:** “Ye’ve got coin. Let’s get on with it.”  
@@ -9272,7 +9353,7 @@ You ignite the censer’s fumes: a backdraft roars through the chamber, engulfin
 ]
 
 
-:: PayKnightFeeHigh {"position":"3300,775","size":"100,100"}
+:: PayKnightFeeHigh {"position":"3525,775","size":"100,100"}
 (if: $money >= 8)[
   (set: $money to it - 8)
   **Brannon:** “Here’s your freedom. Next time, be nicer to folk.”  
@@ -9326,71 +9407,280 @@ What do you do?
 
 
 
-:: Play a god {"position":"2850,1775","size":"100,100"}
+:: Play Ossuary Knight {"position":"3125,725","size":"100,100"}
+(set: $job to 3)
+(if: $CorvanQuest is true)[
+While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
+]
+(else:)[
+**You:** “I’m an Ossuary Knight.”  
+**Brannon:** “An Ossuary Knight, are ye? Heavy bones and all that. I don’t trust yer kind much…”  
+He narrows his eyes. “That’ll be five silver shards: no exceptions... and I will need your help to find his body of course....”  
+* [[Pay the five shards and agree to help him|PayKnightFee]]  
+* [[Try to haggle|HaggleKnight]]
+]
+
+
+:: Play a god {"position":"2625,1525","size":"100,100"}
+{
+(set: $strength to 8)
+(set: $basestrength to 8)
+
+(set: $intelligence to 8)
+(set: $baseintelligence to 8)
+
+(set: $luck to 15)
+(set: $baseluck to 15)
+
+(set: $charisma to 10)
+(set: $basecharisma to 10)
+
+(set: $health to 50)
+(set: $maxHealth to 50)
 (set: $job to 0)
-(if: $CorvanQuest is true)[
-While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
-]
-(else:)[
-**Brannon:** He recoils. "Oh, sir. I didn't recognize you. Let me help you out. "
+(set: $jobname to 'God Flavius')
+(set: $description to "But your name could lead you to a better destiny, should you choose it :")
+}
 
-As you leave your coffin, You try to move your perfectly preverved body to [[continue your conversation|MainQuest]].
-]
+  <h2 class="character-title">God Flavius</h2>
+ But your name could lead you to a better destiny, should you choose it :
+
+<button class="boutonXp" >[[Click here to start your adventure !->Start God]]</button>
+
+<button>[[Back →->Classes]]</button>
+
+<script>
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem("characterUnlocked") === "true";
+        const characterButton = document.querySelector('.nav-btn[data-panel="skills"]');
+        const elementsToHide = document.querySelectorAll('.top-nav, .xp-container, .inventory-sidebar');
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove("disabled-btn");
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add("disabled-btn");
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el => {
+            el.style.display = characterUnlocked ? "" : "none";
+        });
+    }
+
+    // Met à jour l'état de l'UI à chaque changement de passage
+    $(document).on(':passagerender', function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+</script>
 
 
-:: Play as a Gravebinder {"position":"2975,325","size":"100,100"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:: Play as a Gravebinder {"position":"3000,300","size":"100,100"}
+{
+(set: $strength to 8)
+(set: $basestrength to 8)
+
+(set: $intelligence to 8)
+(set: $baseintelligence to 8)
+
+(set: $luck to 15)
+(set: $baseluck to 15)
+
+(set: $charisma to 10)
+(set: $basecharisma to 10)
+
+(set: $health to 50)
+(set: $maxHealth to 50)
 (set: $job to 1)
-(if: $CorvanQuest is true)[
-While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
-]
-(else:)[
-**You:** “I’m a Gravebinder.”  
-**Brannon:** “A Gravebinder, eh? Keepers of the dead and all that. Respectable trade.”  
-He cracks a smile. “And I suppose you want me to dig you out, right?
-**You:** “That would be lovely.”
-**Brannon:** “Diggin’s on the house for one of you... if you help me find his body of course....”  
-**You:** “Anything you want, just get me out of here!”
-**You:** “No way!"
+(set: $jobname to 'Gravebinder')
+(set: $description to "Some people are born with a plan. You never had one. A gambler, a drifter, a survivor—you’ve always relied on luck more than skill. Space wasn’t a dream, just the latest roll of the dice. Maybe out here, you’ll strike it big. Maybe you’ll crash and burn. Either way, it’s one hell of a ride")
+}
 
-(click:"get me out of here!")[
-You emerge from the coffin [[with difficulty|MainQuest]]
-(replace:"No way!")[no way.]
-]
-(click:"No way!")[The man walk away, [[desapointed|GameOverStarve]].]
-]
+  <h2 class="character-title">Gravebinder</h2>
+Some people are born with a plan. You never had one. A gambler, a drifter, a survivor—you’ve always relied on luck more than skill. Space wasn’t a dream, just the latest roll of the dice. Maybe out here, you’ll strike it big. Maybe you’ll crash and burn. Either way, it’s one hell of a ride
 
+<button class="boutonXp" >[[Click here to start your adventure !->StartGravebinder]]</button>
+
+<button>[[Back →->Classes]]</button>
+
+<script>
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem("characterUnlocked") === "true";
+        const characterButton = document.querySelector('.nav-btn[data-panel="skills"]');
+        const elementsToHide = document.querySelectorAll('.top-nav, .xp-container, .inventory-sidebar');
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove("disabled-btn");
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add("disabled-btn");
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el => {
+            el.style.display = characterUnlocked ? "" : "none";
+        });
+    }
+
+    // Met à jour l'état de l'UI à chaque changement de passage
+    $(document).on(':passagerender', function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+</script>
 
 
 
 :: Play as a Lantern Bearer {"position":"2950,575","size":"100,100"}
+{
+(set: $strength to 8)
+(set: $basestrength to 8)
+
+(set: $intelligence to 8)
+(set: $baseintelligence to 8)
+
+(set: $luck to 15)
+(set: $baseluck to 15)
+
+(set: $charisma to 10)
+(set: $basecharisma to 10)
+(set: $health to 50)
+(set: $maxHealth to 50)
 (set: $job to 2)
-(if: $CorvanQuest is true)[
-While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
-]
-(else:)[
-**You:** “I’m a Lantern Bearer.”  
-**Brannon:** He scratches his chin. “Lantern Bearers… light folkin’ in the dark. I’ll get you out: just toss me a silver shard for the candles, and I will need your help to find his body of course....”  
-* [[If you pay 1 silver shard and accept to find the body foor him|PayForLight]]  
-* [[If you refuse to pay or to help him|RefuseToPay2]]
-]
+(set: $jobname to 'Lantern Bearer')
+(set: $description to "keeper of the Lantern of True Dawn. When the Red Fog descended, you stayed behind to comfort the dying: and joined their number. They entombed you in, hoping your spirit would find peace. But as the centuries passed, the light within your lantern refused to extinguish. Now, as you push open the heavy lid, the pale flame sputters to life once more, guiding your first uncertain steps back into a ruined world")
+}
+
+  <h2 class="character-title">Lantern Bearer</h2>
+keeper of the Lantern of True Dawn. When the Red Fog descended, you stayed behind to comfort the dying: and joined their number. They entombed you in, hoping your spirit would find peace. But as the centuries passed, the light within your lantern refused to extinguish. Now, as you push open the heavy lid, the pale flame sputters to life once more, guiding your first uncertain steps back into a ruined world.
+
+<button class="boutonXp" >[[Click here to start your adventure !->Start Lantern Bearer]]</button>
+
+<button>[[Back →->Classes]]</button>
+
+<script>
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem("characterUnlocked") === "true";
+        const characterButton = document.querySelector('.nav-btn[data-panel="skills"]');
+        const elementsToHide = document.querySelectorAll('.top-nav, .xp-container, .inventory-sidebar');
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove("disabled-btn");
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add("disabled-btn");
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el => {
+            el.style.display = characterUnlocked ? "" : "none";
+        });
+    }
+
+    // Met à jour l'état de l'UI à chaque changement de passage
+    $(document).on(':passagerender', function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+</script>
 
 
-:: Play as a Pale Scholar {"position":"2800,1350","size":"100,100"}
+
+:: Play as a Pale Scholar {"position":"2900,1125","size":"100,100"}
+{
+(set: $strength to 8)
+(set: $basestrength to 8)
+
+(set: $intelligence to 8)
+(set: $baseintelligence to 8)
+
+(set: $luck to 15)
+(set: $baseluck to 15)
+
+(set: $charisma to 10)
+(set: $basecharisma to 10)
+
+(set: $health to 50)
+(set: $maxHealth to 50)
 (set: $job to 5)
-(if: $CorvanQuest is true)[
-While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
-]
-(else:)[
-**You:** “I’m a Pale Scholar.”  
-**Brannon:** “Pale Scholar, eh? big words, empty purses.” He chuckles. “I’ll get you out: for a service and a lesson. 
-**You:** “A service? I don't know how I can help you from down there?”  
-**Brannon:** “Of course, I will dig you out and you will help me out to find the Magister's body."
-**You:** “That seems reasonable, but what about the lesson then?".
-**Brannon:** “Ye! The lesson... I have been wondering, you see... I’ve heard all kinds of tales about Magister Corvan: but no one agrees on the truth.”  
-He leans on his shovel and clears his throat. “Open those big ears of yours, then tell me what you make of it.”
+(set: $jobname to 'Pale Scholar')
+(set: $description to "last of the Archivists of Erelith. You sought forbidden knowledge and found something deeper: death beyond death. They buried you with your grim tomes clutched to your chest, a precaution against the curses sewn into your bones. Yet when your eyes flicker open in your cramped coffin, the runes carved into the wood begin to weep ink, as if welcoming you home. You are now awake, scholar no longer: a living relic, desperate to rewrite your fate")
+}
 
-* [[Hear Brannon’s account|ScholarLore1]]
-]
+  <h2 class="character-title">Pale Scholar</h2>
+last of the Archivists of Erelith. You sought forbidden knowledge and found something deeper: death beyond death. They buried you with your grim tomes clutched to your chest, a precaution against the curses sewn into your bones. Yet when your eyes flicker open in your cramped coffin, the runes carved into the wood begin to weep ink, as if welcoming you home. You are now awake, scholar no longer: a living relic, desperate to rewrite your fate
+
+<button class="boutonXp" >[[Click here to start your adventure !->Start Pale Scholar]]</button>
+
+<button>[[Back →->Classes]]</button>
+
+<script>
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem("characterUnlocked") === "true";
+        const characterButton = document.querySelector('.nav-btn[data-panel="skills"]');
+        const elementsToHide = document.querySelectorAll('.top-nav, .xp-container, .inventory-sidebar');
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove("disabled-btn");
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add("disabled-btn");
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el => {
+            el.style.display = characterUnlocked ? "" : "none";
+        });
+    }
+
+    // Met à jour l'état de l'UI à chaque changement de passage
+    $(document).on(':passagerender', function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+</script>
 
 
 
@@ -9411,45 +9701,138 @@ He leans on his shovel and clears his throat. “Open those big ears of yours, t
 
 
 :: Play as a Whispered {"position":"2950,875","size":"100,100"}
+{
+(set: $strength to 8)
+(set: $basestrength to 8)
+
+(set: $intelligence to 8)
+(set: $baseintelligence to 8)
+
+(set: $luck to 15)
+(set: $baseluck to 15)
+
+(set: $charisma to 10)
+(set: $basecharisma to 10)
+
+(set: $health to 50)
+(set: $maxHealth to 50)
 (set: $job to 4)
-(if: $CorvanQuest is true)[
-While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
-]
-(else:)[
-**You:** “I’m a Whispered.”  
-**Brannon (from above):** “A Whispered, eh? Well I may need help of someone your kind to dig out the real Magister Corvan...
-**You:** “Anything you want!”  
-**Brannon (from above):** “Yes, yes, of course. You say that now that I got you buried here. But I don't trust your kind. Silent killers with secrets in every breath. Speak up: convince me you’re worth digging out.”  
-He taps his shovel impatiently.  
+(set: $jobname to 'Whispered')
+(set: $description to "once a silent blade for the Pale Court. When your masters turned against you, your betrayal was swift and merciless. They disposed of your body in a shallow grave... but the secrets you carried rooted deep into your restless soul. Now, blinking against the faint, rotten light, you push your way free from a cracked, hastily-nailed coffin. Your fingers find your dagger even before your mind remembers your name. There is still work to do in this broken world")
+}
 
-What do you say?  
-* [[Reveal a critical secret about Brannon’s past|WhisperedRevealSecret]]  
-* [[Offer to clear his name of a rumor|WhisperedClearRumor]]  
-* [[Ask a question that only a Whispered could know|WhisperedAskMystery]]  
-* [[Offer coin instead|WhisperedPay]]  
-]
+  <h2 class="character-title">Whispered</h2>
+once a silent blade for the Pale Court. When your masters turned against you, your betrayal was swift and merciless. They disposed of your body in a shallow grave... but the secrets you carried rooted deep into your restless soul. Now, blinking against the faint, rotten light, you push your way free from a cracked, hastily-nailed coffin. Your fingers find your dagger even before your mind remembers your name. There is still work to do in this broken world
+
+<button class="boutonXp" >[[Click here to start your adventure !->Start Whispered]]</button>
+
+<button>[[Back →->Classes]]</button>
+
+<script>
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem("characterUnlocked") === "true";
+        const characterButton = document.querySelector('.nav-btn[data-panel="skills"]');
+        const elementsToHide = document.querySelectorAll('.top-nav, .xp-container, .inventory-sidebar');
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove("disabled-btn");
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add("disabled-btn");
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el => {
+            el.style.display = characterUnlocked ? "" : "none";
+        });
+    }
+
+    // Met à jour l'état de l'UI à chaque changement de passage
+    $(document).on(':passagerender', function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+</script>
 
 
 
+:: Play as an Exhumed {"position":"2800,1300","size":"100,100"}
+{
+(set: $strength to 8)
+(set: $basestrength to 8)
 
+(set: $intelligence to 8)
+(set: $baseintelligence to 8)
 
+(set: $luck to 15)
+(set: $baseluck to 15)
 
+(set: $charisma to 10)
+(set: $basecharisma to 10)
 
-
-
-
-
-:: Play as an Exhumed {"position":"2750,1575","size":"100,100"}
+(set: $health to 50)
+(set: $maxHealth to 50)
 (set: $job to 6)
-(if: $CorvanQuest is true)[
-While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
-]
-(else:)[
-**You:** “I’m an Exhumed.”  
-**Brannon:** He recoils. “Half-dead folk give me the creeps. I’ll help: for the **highest** bid... but you need first to agree to help me find Magister Corvan's body of course...Although I don't know if your help means much at all....”  
-* [[Offer all your money and your help|ExhumedOfferAll]]  
-* [[Threaten him until he digs anyway|ExhumedThreaten]]
-]
+(set: $jobname to 'Exhumed')
+(set: $description to " condemned criminal, test subject of a forgotten experiment. Death came slowly, but not completely. The wardens buried you in a nameless grave, bound with iron nails and cursed chains. Yet the experiment refused to end. Now, you are awake, and this world, whatever it is, will snap apart under your fists. Your muscles ache with unnatural hunger as somewhere deep in your fractured mind, you know this is just the beginning of your true sentence")
+}
+
+  <h2 class="character-title">Exhumed</h2>
+ condemned criminal, test subject of a forgotten experiment. Death came slowly, but not completely. The wardens buried you in a nameless grave, bound with iron nails and cursed chains. Yet the experiment refused to end. Now, you are awake, and this world, whatever it is, will snap apart under your fists. Your muscles ache with unnatural hunger as somewhere deep in your fractured mind, you know this is just the beginning of your true sentence
+
+<button class="boutonXp" >[[Click here to start your adventure !->Start Exhumed]]</button>
+
+<button>[[Back →->Classes]]</button>
+
+<script>
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem("characterUnlocked") === "true";
+        const characterButton = document.querySelector('.nav-btn[data-panel="skills"]');
+        const elementsToHide = document.querySelectorAll('.top-nav, .xp-container, .inventory-sidebar');
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove("disabled-btn");
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add("disabled-btn");
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el => {
+            el.style.display = characterUnlocked ? "" : "none";
+        });
+    }
+
+    // Met à jour l'état de l'UI à chaque changement de passage
+    $(document).on(':passagerender', function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9458,17 +9841,65 @@ While you were piecing things together, the groundskeeper started to dig out the
 
 
 :: Play as an Ossuary Knight {"position":"2950,725","size":"100,100"}
+{
+(set: $strength to 8)
+(set: $basestrength to 8)
+
+(set: $intelligence to 8)
+(set: $baseintelligence to 8)
+
+(set: $luck to 15)
+(set: $baseluck to 15)
+
+(set: $charisma to 10)
+(set: $basecharisma to 10)
+
+(set: $health to 50)
+(set: $maxHealth to 50)
 (set: $job to 3)
-(if: $CorvanQuest is true)[
-While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
-]
-(else:)[
-**You:** “I’m an Ossuary Knight.”  
-**Brannon:** “An Ossuary Knight, are ye? Heavy bones and all that. I don’t trust yer kind much…”  
-He narrows his eyes. “That’ll be five silver shards: no exceptions... and I will need your help to find his body of course....”  
-* [[Pay the five shards and agree to help him|PayKnightFee]]  
-* [[Try to haggle|HaggleKnight]]
-]
+(set: $jobname to 'Ossuary Knight')
+(set: $description to "fallen hero of the Ash Wars. Cut down by a cursed blade, your final honors were grim: a tomb of rotten pelts of some dead creatures, your armor rusted shut around you. Yet no grave could hold your iron will forever. Now, with a groan of rusted hinges and crumbling stone, you push, trying to shove aside your coffin's heavy lid. The world needs its knight once more: even if the sun will never rise again on your battered shield")
+}
+
+  <h2 class="character-title">Ossuary Knight</h2>
+fallen hero of the Ash Wars. Cut down by a cursed blade, your final honors were grim: a tomb of rotten pelts of some dead creatures, your armor rusted shut around you. Yet no grave could hold your iron will forever. Now, with a groan of rusted hinges and crumbling stone, you push, trying to shove aside your coffin's heavy lid. The world needs its knight once more: even if the sun will never rise again on your battered shield.
+
+<button class="boutonXp" >[[Click here to start your adventure !->Play Ossuary Knight]]</button>
+
+<button>[[Back →->Classes]]</button>
+
+<script>
+(function () {
+    function updateUI() {
+        const characterUnlocked = sessionStorage.getItem("characterUnlocked") === "true";
+        const characterButton = document.querySelector('.nav-btn[data-panel="skills"]');
+        const elementsToHide = document.querySelectorAll('.top-nav, .xp-container, .inventory-sidebar');
+
+        if (characterButton) {
+            if (characterUnlocked) {
+                characterButton.classList.remove("disabled-btn");
+                characterButton.disabled = false;
+            } else {
+                characterButton.classList.add("disabled-btn");
+                characterButton.disabled = true;
+            }
+        }
+
+        elementsToHide.forEach(el => {
+            el.style.display = characterUnlocked ? "" : "none";
+        });
+    }
+
+    // Met à jour l'état de l'UI à chaque changement de passage
+    $(document).on(':passagerender', function () {
+        updateUI();
+    });
+
+    // Exécuter immédiatement au chargement
+    updateUI();
+})();
+</script>
+
 
 
 :: PlusieursObjets {"position":"850,250","size":"100,100"}
@@ -9742,7 +10173,7 @@ You pocket the knucklebone dice. They feel unnaturally warm… as if someone: or
 (display:"MacroPassage")
 
 
-:: RefuseToPay2 {"position":"3200,450","size":"100,100"}
+:: RefuseToPay2 {"position":"3400,400","size":"100,100"}
 \:: RefuseToPay2
 **Brannon:** “Fine, fine… that’ll be two shards then. Can’t work for free.”  
 * [[Pay begrudgingly (2 silver)|PayForLight]]  
@@ -10103,7 +10534,7 @@ You circle the inner sanctum, eyes peeled for hidden panels or ritual implements
 
 
 
-:: ScholarAnswerKnowledge {"position":"3875,1225","size":"100,100"}
+:: ScholarAnswerKnowledge {"position":"3875,1200","size":"100,100"}
 \:: ScholarAnswerKnowledge
 **You:** “His aim was to understand the soul, to advance mortal science.”  
 **Brannon:** He scratches his chin. “A noble goal: but dangerous when pride fills the gap.”  
@@ -10120,7 +10551,7 @@ setTimeout(() => {
 **Brannon:** "Smart as they come. Out you go."
 
 
-:: ScholarAnswerLove {"position":"3600,1425","size":"100,100"}
+:: ScholarAnswerLove {"position":"3725,1425","size":"100,100"}
 \:: ScholarAnswerLove
 **You:** “He loved someone too much: bent death itself to bring them back.”  
 **Brannon:** His eyes soften. “A tragic motive… but loss makes liars of us all. Keep your heart guarded.”  
@@ -10152,7 +10583,7 @@ setTimeout(() => {
 * [[Brannon finishes the grave and you emerge|MainQuest]]
 
 
-:: ScholarAnswerPower {"position":"3600,1300","size":"100,100"}
+:: ScholarAnswerPower {"position":"3725,1300","size":"100,100"}
 \:: ScholarAnswerPower
 **You:** “It was vanity: he wanted to shape his own fate as a god.”  
 **Brannon:** He laughs bitterly. “That ambition doom’d him all the same. Watch your own hubris, scholar.”  
@@ -10160,27 +10591,27 @@ setTimeout(() => {
 * [[Brannon frees you solemnly|MainQuest]]
 
 
-:: ScholarLore1 {"position":"2975,1375","size":"100,100"}
+:: ScholarLore1 {"position":"3100,1375","size":"100,100"}
 \:: ScholarLore1
 **Brannon:** “First: Corvan himself claimed he sought to separate soul from flesh: to remove the rot of mortality. Said he would study the pure soul.”  
 * [[Ask for the other version|ScholarLore2]]  
 * [[Offer your opinion now|ScholarOpinion1]]
 
 
-:: ScholarLore2 {"position":"3125,1375","size":"100,100"}
+:: ScholarLore2 {"position":"3250,1375","size":"100,100"}
 \:: ScholarLore2
 **Brannon:** “Others whispered he wanted to cheat death: build himself a god’s body. They said the Severance was vanity, not science.”  
 * [[Ask for more nuance|ScholarLore3]]  
 * [[Offer your opinion now|ScholarOpinion1]]
 
 
-:: ScholarLore3 {"position":"3300,1400","size":"100,100"}
+:: ScholarLore3 {"position":"3425,1400","size":"100,100"}
 \:: ScholarLore3
 **Brannon:** “And some say he did it out of love: wanted to save his wife from the grave, so he split his soul to tether her spirit back.”  
 * [[Offer your opinion now|ScholarOpinion1]]
 
 
-:: ScholarOpinion1 {"position":"3450,1400","size":"100,100"}
+:: ScholarOpinion1 {"position":"3575,1400","size":"100,100"}
 \:: ScholarOpinion1
 Brannon folds his arms. “So, scholar, you’ve heard Corvan’s own words, the whispers of ambition, and the tales of a broken heart. Tell me: why did he truly perform the Severance Ritual?”  
 * [[“He sought pure knowledge, no more.”|ScholarAnswerKnowledge]]  
@@ -10272,6 +10703,113 @@ What do you do?
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+:: Start Exhumed {"position":"2900,1475","size":"100,100"}
+(set: $job to 6)
+(if: $CorvanQuest is true)[
+While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
+]
+(else:)[
+**You:** “I’m an Exhumed.”  
+**Brannon:** He recoils. “Half-dead folk give me the creeps. I’ll help: for the **highest** bid... but you need first to agree to help me find Magister Corvan's body of course...Although I don't know if your help means much at all....”  
+* [[Offer all your money and your help|ExhumedOfferAll]]  
+* [[Threaten him until he digs anyway|ExhumedThreaten]]
+]
+
+
+
+
+
+
+
+:: Start God {"position":"2800,1700","size":"100,100"}
+(set: $job to 0)
+(if: $CorvanQuest is true)[
+While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
+]
+(else:)[
+**Brannon:** He recoils. "Oh, sir. I didn't recognize you. Let me help you out. "
+
+As you leave your coffin, You try to move your perfectly preverved body to [[continue your conversation|MainQuest]].
+]
+
+
+:: Start Lantern Bearer {"position":"3125,575","size":"100,100"}
+(set: $job to 2)
+(if: $CorvanQuest is true)[
+While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
+]
+(else:)[
+**You:** “I’m a Lantern Bearer.”  
+**Brannon:** He scratches his chin. “Lantern Bearers… light folkin’ in the dark. I’ll get you out: just toss me a silver shard for the candles, and I will need your help to find his body of course....”  
+* [[If you pay 1 silver shard and accept to find the body foor him|PayForLight]]  
+* [[If you refuse to pay or to help him|RefuseToPay2]]
+]
+
+
+:: Start Pale Scholar {"position":"3025,1225","size":"100,100"}
+(set: $job to 5)
+(if: $CorvanQuest is true)[
+While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
+]
+(else:)[
+**You:** “I’m a Pale Scholar.”  
+**Brannon:** “Pale Scholar, eh? big words, empty purses.” He chuckles. “I’ll get you out: for a service and a lesson. 
+**You:** “A service? I don't know how I can help you from down there?”  
+**Brannon:** “Of course, I will dig you out and you will help me out to find the Magister's body."
+**You:** “That seems reasonable, but what about the lesson then?".
+**Brannon:** “Ye! The lesson... I have been wondering, you see... I’ve heard all kinds of tales about Magister Corvan: but no one agrees on the truth.”  
+He leans on his shovel and clears his throat. “Open those big ears of yours, then tell me what you make of it.”
+
+* [[Hear Brannon’s account|ScholarLore1]]
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:: Start Whispered {"position":"3125,875","size":"100,100"}
+(set: $job to 4)
+(if: $CorvanQuest is true)[
+While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
+]
+(else:)[
+**You:** “I’m a Whispered.”  
+**Brannon (from above):** “A Whispered, eh? Well I may need help of someone your kind to dig out the real Magister Corvan...
+**You:** “Anything you want!”  
+**Brannon (from above):** “Yes, yes, of course. You say that now that I got you buried here. But I don't trust your kind. Silent killers with secrets in every breath. Speak up: convince me you’re worth digging out.”  
+He taps his shovel impatiently.  
+
+What do you say?  
+* [[Reveal a critical secret about Brannon’s past|WhisperedRevealSecret]]  
+* [[Offer to clear his name of a rumor|WhisperedClearRumor]]  
+* [[Ask a question that only a Whispered could know|WhisperedAskMystery]]  
+* [[Offer coin instead|WhisperedPay]]  
+]
 
 
 
@@ -10565,6 +11103,31 @@ What? But who [[the hell|Classes]] are you, then?
       ]
   ]
 ]
+
+
+
+:: StartGravebinder {"position":"3200,250","size":"100,100"}
+
+(set: $job to 1)
+(if: $CorvanQuest is true)[
+While you were piecing things together, the groundskeeper started to dig out the next grave, with no luck. You try to move your stiffened body to [[continue your conversation|MainQuest]].
+]
+(else:)[
+**You:** “I’m a Gravebinder.”  
+**Brannon:** “A Gravebinder, eh? Keepers of the dead and all that. Respectable trade.”  
+He cracks a smile. “And I suppose you want me to dig you out, right?
+**You:** “That would be lovely.”
+**Brannon:** “Diggin’s on the house for one of you... if you help me find his body of course....”  
+**You:** “Anything you want, just get me out of here!”
+**You:** “No way!"
+
+(click:"get me out of here!")[
+You emerge from the coffin [[with difficulty|MainQuest]]
+(replace:"No way!")[no way.]
+]
+(click:"No way!")[The man walk away, [[desapointed|GameOverStarve]].]
+]
+
 
 
 
@@ -11786,7 +12349,7 @@ What do you do?
 
 
 
-:: WhisperedAskMystery {"position":"3375,950","size":"100,100"}
+:: WhisperedAskMystery {"position":"3550,975","size":"100,100"}
 \:: WhisperedAskMystery
 **You:** “What’s the codeword the Wharf Watch uses at midnight?”  
 Brannon’s jaw drops. “How: ? That’s not for common ears.”  
@@ -11800,7 +12363,7 @@ Brannon’s jaw drops. “How: ? That’s not for common ears.”
   ]
 
 
-:: WhisperedClearRumor {"position":"3250,950","size":"100,100"}
+:: WhisperedClearRumor {"position":"3425,975","size":"100,100"}
 \:: WhisperedClearRumor
 **You:** “I can silence those who accuse you of theft: the furnace pieces that disappeared last month.”  
 Brannon’s grip tightens on the handle. “You’d help me clear my name?”  
@@ -11808,7 +12371,7 @@ Brannon’s grip tightens on the handle. “You’d help me clear my name?”
 * [[Hesitate and try a different approach|WhisperedAskMystery]]
 
 
-:: WhisperedPay {"position":"3525,1000","size":"100,100"}
+:: WhisperedPay {"position":"3700,1025","size":"100,100"}
 \:: WhisperedPay
 **Brannon:** “Fine. Two silver shards, and I’ll shove you out.”  
 (if: $money >= 2)[
@@ -11821,7 +12384,7 @@ Brannon’s grip tightens on the handle. “You’d help me clear my name?”
 ]
 
 
-:: WhisperedRevealSecret {"position":"3100,950","size":"100,100"}
+:: WhisperedRevealSecret {"position":"3275,975","size":"100,100"}
 \:: WhisperedRevealSecret
 **You:** “You once saved the mayor’s daughter from a spirit attack: word is, you did it without raising a cry.”  
 Brannon freezes. “Where’d you hear that?”  
@@ -11836,7 +12399,7 @@ Brannon freezes. “Where’d you hear that?”
   ]
 
 
-:: WhisperedShowProof {"position":"3250,1075","size":"100,100"}
+:: WhisperedShowProof {"position":"3425,1100","size":"100,100"}
 \:: WhisperedShowProof
 **You:** “Under the granary floor, behind the loose brick. The pieces were stashed there.”  
 Brannon’s eyes narrow: then soften. “By the gods… you’re for real.”  
@@ -12055,8 +12618,8 @@ window.openCasino = function () {
     <h2>Game System & Animations</h2>
     <p>Menus, animations, and the complete game system were developed by Quentin BOISSET.</p>
     <br />
-    <h2>Music</h2>
-    <p>The music was composed by Quentin BOISSET. Only the two main ambient tracks were created using Suno due to our limited experience in full music production; we plan to hire a composer once we have the budget.</p>
+ <h2>Music</h2>
+    <p>The music was composed by Quentin BOISSET, while the main ambient tracks were created by Olivier Mavré.</p>
     <br />
     <h2>Sound Effects</h2>
     <p>All sound effects were created by Quentin BOISSET.</p>
@@ -12076,10 +12639,12 @@ window.openCasino = function () {
 
 <script>
 
-    if (window.musiqueDeFond) {
-      window.musiqueDeFond.pause();
-      window.musiqueDeFond.currentTime = 0;
-    }
+
+if (window.musiqueDeFond) {
+    window.musiqueDeFond.pause();
+    window.musiqueDeFond.currentTime = 0;
+}
+
 
     // Lancer la musique des crédits
     const musiqueCredits = new Audio("https://pickyouruniverse.com/DataProjects/General/SonEvenements/credit.mp3");
@@ -12558,6 +13123,7 @@ window.openCasino = function () {
         <div class="stat-controls">
             <button class="stat-btn" onclick="adjustStat('strength', -1)">-</button>
             <div class="stat-value" id="strength-value">$basestrength</div>
+            <span class="bonus-text" id="bonus-strength"></span>
             <button class="stat-btn" onclick="adjustStat('strength', 1)">+</button>
         </div>
         <span class="stat-name">Strength</span>
@@ -12567,6 +13133,7 @@ window.openCasino = function () {
         <div class="stat-controls">
             <button class="stat-btn" onclick="adjustStat('luck', -1)">-</button>
             <div class="stat-value" id="luck-value">$baseluck</div>
+            <span class="bonus-text" id="bonus-luck"></span>
             <button class="stat-btn" onclick="adjustStat('luck', 1)">+</button>
         </div>
         <span class="stat-name">luck</span>
@@ -12576,6 +13143,7 @@ window.openCasino = function () {
         <div class="stat-controls">
             <button class="stat-btn" onclick="adjustStat('intelligence', -1)">-</button>
             <div class="stat-value" id="intelligence-value">$baseintelligence</div>
+            <span class="bonus-text" id="bonus-intelligence"></span>
             <button class="stat-btn" onclick="adjustStat('intelligence', 1)">+</button>
         </div>
         <span class="stat-name">Intelligence</span>
@@ -12585,6 +13153,7 @@ window.openCasino = function () {
         <div class="stat-controls">
             <button class="stat-btn" onclick="adjustStat('charisma', -1)">-</button>
             <div class="stat-value" id="charisma-value">$basecharisma</div>
+            <span class="bonus-text" id="bonus-charisma"></span>
             <button class="stat-btn" onclick="adjustStat('charisma', 1)">+</button>
         </div>
         <span class="stat-name">Charisma</span>
@@ -12610,9 +13179,18 @@ Remaining points : <span class="points-value" id="points-remaining">$pointExp</s
       </div>
 
       <div class="option-item-son">
-        <label for="volume-son">Sound volume</label>
         <input type="range" id="volume-son" min="0" max="100" value="50">
       </div>
+      
+<div class="option-item">
+  <label for="activateMarchandMusic">Marchand Music</label>
+  <input type="checkbox" id="activateMarchandMusic" checked>
+</div>
+
+
+<div class="option-item-son">
+  <input type="range" id="volume-marchand-music" min="0" max="100" value="70">
+</div>
       
 <div class="option-item">
   <label for="dr-toggle">Dice Role</label>
@@ -12632,9 +13210,18 @@ Remaining points : <span class="points-value" id="points-remaining">$pointExp</s
       </div>
 
       <div class="option-item-son">
-        <label for="volume-sfx">SFX volume</label>
         <input type="range" id="volume-sfx" min="0" max="100" value="50">
       </div>
+      
+       <div class="option-item">
+        <label for="combat-music-toggle">Combat Music</label>
+        <input type="checkbox" id="combat-music-toggle" checked>
+      </div>
+
+      <div class="option-item-son">
+        <input type="range" id="volume-combat-music" min="0" max="100" value="70">
+      </div>
+
       
       <div class="option-item">
       <label for="rf-toggle">Dice Role Fight</label>
@@ -12667,7 +13254,7 @@ Remaining points : <span class="points-value" id="points-remaining">$pointExp</s
                         ]
                       ]                     
                       </div>
-                      <div class="blockParametre">   
+                      <div class="blockParametreBas">   
                          <a class="lienSite" href="https://pickyouruniverse.com/index.php" class="btn">Website</a>
                       <div class="blockParametre">[[credits]]</div>
                       </div>
@@ -12738,91 +13325,106 @@ Remaining points : <span class="points-value" id="points-remaining">$pointExp</s
 //!!Menu Option 
 window.$skillCheckEnable = true;
 window.$skillCheckEnableFight = true;
+window.sfxEnabled = true;
+window.combatMusicEnabled = true;
+window.marchandMusicEnabled = true;
+window.backgroundMusicEnabled = true;
+window.sfxVolume = 0.5;
+window.combatMusicVolume = 0.7;
+window.marchandMusicVolume = 0.7; 
 
-document.getElementById("activateDice").addEventListener("change", function() {
-    window.$skillCheckEnable = this.checked; 
-});
+function applyOptionById(id, value) {
+    switch(id) {
+        case 'activateDice':
+            window.$skillCheckEnable = value;
+            break;
+        case 'activateDiceFight':
+            window.$skillCheckEnableFight = value;
+            break;
+        case 'sfx-toggle':
+            window.sfxEnabled = value;
+            break;
+        case 'combat-music-toggle':
+            window.combatMusicEnabled = value;
+            if (!value && window.musiqueCombats) window.musiqueCombats.pause();
+            break;
+        case 'activer-musique':
+            window.backgroundMusicEnabled = value;
+            if (value) {
+                window.musiqueDeFond?.play().catch(err => console.warn("Lecture musique bloquée", err));
+            } else {
+                window.musiqueDeFond?.pause();
+            }
+            break;
+              case 'activateMarchandMusic':
+            window.marchandMusicEnabled = value;
+              if (!value && window.marchandMusicEnabled) window.musiqueMarchand.pause();
+    }
+}
 
-// Lors du changement de la checkbox "activateDiceFight"
-document.getElementById("activateDiceFight").addEventListener("change", function() {
-    window.$skillCheckEnableFight = this.checked;  
-});
+// 🔧 Gestion sliders (volume)
+function applyVolumeById(id, value) {
+    const volume = value / 100;
+    switch(id) {
+        case 'volume-son':
+            if (window.musiqueDeFond) window.musiqueDeFond.volume = volume;
+            break;
+        case 'volume-sfx':
+            window.sfxVolume = volume;
+            break;
+        case 'volume-combat-music':
+            window.combatMusicVolume = volume;
+            if (window.musiqueCombats) window.musiqueCombats.volume = volume;
+            break;
+         case 'volume-marchand-music':
+            window.marchandMusicVolume = volume;
+            if (window.musiqueMarchand) window.musiqueMarchand.volume = volume;
+            break;
+    }
+}
 
-//!! Save localStorage & restaurer options
+// ✅ Initialisation options
 function setupOptionPersistence() {
-    // ✅ Gérer toutes les checkboxes (on/off)
+    // 🟢 Checkboxes
     document.querySelectorAll('input[type="checkbox"]').forEach(input => {
         const id = input.id;
         if (!id) return;
 
-        // Charger l’état sauvegardé
         const saved = localStorage.getItem(`option-${id}`);
-        if (saved !== null) {
-            input.checked = saved === 'true';
-        }
+        if (saved !== null) input.checked = saved === 'true';
 
-        // Sauvegarder lors du changement
+        applyOptionById(id, input.checked); // Applique au chargement
+
         input.addEventListener('change', () => {
             localStorage.setItem(`option-${id}`, input.checked);
             console.log(`💾 [Option] ${id} = ${input.checked}`);
-
-            // Appliquer effets immédiats
-            if (id === 'activer-musique') {
-                if (input.checked) {
-                    window.musiqueDeFond?.play().catch(err => console.log("Lecture auto bloquée", err));
-                } else {
-                    window.musiqueDeFond?.pause();
-                }
-            }
-
-            if (id === 'sfx-toggle') {
-                window.sfxEnabled = input.checked;
-            }
-
-            if (id === 'activateDice') {
-                $skillCheckEnable = input.checked;
-            }
-
-            if (id === 'activateDiceFight') {
-                $skillCheckEnableFight = input.checked;
-            }
+            applyOptionById(id, input.checked);
         });
     });
 
-    // ✅ Gérer tous les sliders (input[type=range])
+    // 🎚️ Sliders
     document.querySelectorAll('input[type="range"]').forEach(input => {
         const id = input.id;
         if (!id) return;
 
-        // Charger l’état sauvegardé
         const saved = localStorage.getItem(`option-${id}`);
         if (saved !== null) {
             input.value = saved;
-            input.dispatchEvent(new Event('input'));
+            applyVolumeById(id, input.value);
         }
 
-        // Sauvegarder lors du changement
         input.addEventListener('input', () => {
             localStorage.setItem(`option-${id}`, input.value);
             console.log(`💾 [Slider] ${id} = ${input.value}`);
-
-            // ✅ Appliquer les effets immédiats
-            if (id === 'volume-son' && window.musiqueDeFond) {
-                window.musiqueDeFond.volume = input.value / 100;
-            }
-
-            if (id === 'volume-sfx') {
-                window.sfxVolume = input.value / 100;
-            }
+            applyVolumeById(id, input.value);
         });
     });
-
-    // ✅ Appliquer l’état initial de la musique après chargement
-    const musiqueToggle = document.getElementById('activer-musique');
-    if (musiqueToggle && !musiqueToggle.checked) {
-        window.musiqueDeFond?.pause();
-    }
 }
+
+// 🚀 Lancer l’init au chargement de la page
+window.addEventListener("load", () => {
+    setupOptionPersistence();
+});
 //fin save localstorage
 
 // Fonction de réinitialisation
@@ -12915,7 +13517,7 @@ window.resetLocalStorage = function() {
     
    // Vérifier si l'audio existe déjà pour éviter de le recréer
      const musiques = [
-    "https://pickyouruniverse.com/DataProjects/SpaceshipAccident/musique/SpaceshipAccident.mp3",
+    "https://pickyouruniverse.com/DataProjects/SpaceshipAccident/musique/General.wav",
     "https://pickyouruniverse.com/DataProjects/SpaceshipAccident/musique/SpaceshipAccident(1).mp3"
   ];
   
@@ -12970,21 +13572,21 @@ window.changerMusique = function(nouvelleMusique) {
 
 //!!Fin Menu Option 
 //!--------------------------------------------------------------------------------------------
-//!Journal
-
-//!Fin Journal
-//!--------------------------------------------------------------------------------------------
 //!!Menu Caractère
     // Récupération du texte affiché dans le <td id="verificationjob">
     let jobname = document.getElementById("verificationjob").textContent.trim();
 
     // Associe les métiers à leurs images
-    let jobImages = {
-        "Engineer": "https://pickyouruniverse.com/DataProjects/SpaceshipAccident/imagejeux/Personnages/Intelligence.jpg",
-        "soldier": "https://pickyouruniverse.com/DataProjects/SpaceshipAccident/imagejeux/Personnages/Strength.jpg",
-        "Wild Card": "https://pickyouruniverse.com/DataProjects/SpaceshipAccident/imagejeux/Personnages/Luck.jpg",
-        "God": "https://pickyouruniverse.com/DataProjects/SpaceshipAccident/imagejeux/Personnages/Maximus.jpg"
-    };
+let jobImages = {
+    "Gravebinder": "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/GraveBinder.png",
+    "Lantern Bearer": "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Lantern.png",
+    "Ossuary Knight": "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Knight.png",
+    "Whispered": "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Whispered.png",
+    "Pale Scholar": "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Scholar.png",
+    "Exhumed": "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/Exhumed.png",
+    "God": "https://pickyouruniverse.com/DataProjects/TheThreeBurials/imagejeux/Classes/God.png"
+};
+
 
     // Vérifie si le métier correspond à une image et met à jour
     if (jobImages[jobname]) {
@@ -13223,6 +13825,9 @@ updateStatsFromEquipment();
                         item.id,
                         item.nom,
                         item.strength,
+                        item.intelligence,
+                        item.luck,
+                    	item.charisma,
                         item.durability,
                         item.life,
                         item.armor,
@@ -13241,6 +13846,9 @@ updateStatsFromEquipment();
                         item.id,
                         item.nom,
                         item.strength,
+                        item.intelligence,
+                        item.luck,
+                    	item.charisma,
                         item.durability,
                         item.life,
                         item.armor,
@@ -13260,6 +13868,9 @@ updateStatsFromEquipment();
                             specialArmorData[index].id,
                             specialArmorData[index].nom,
                             specialArmorData[index].strength,
+                            specialArmorData[index].intelligence,
+                       		specialArmorData[index].luck,
+                    		specialArmorData[index].charisma,
                             specialArmorData[index].durability,
                             specialArmorData[index].life,
                             specialArmorData[index].armor,
@@ -13280,6 +13891,9 @@ updateStatsFromEquipment();
                             inventoryGridData[index].id,
                             inventoryGridData[index].nom,
                             inventoryGridData[index].strength,
+                            inventoryGridData[index].intelligence,
+                       		inventoryGridData[index].luck,
+                    		inventoryGridData[index].charisma,
                             inventoryGridData[index].durability,
                             inventoryGridData[index].life,
                             inventoryGridData[index].armor,
@@ -13731,7 +14345,7 @@ function applyHealing(amount) {
 
 
 //! Création d'un nouvel objet 
-window.createItem = function(type, imgSrc, id, nom, strength, durability, life, armor, prix, rare, money) {
+window.createItem = function(type, imgSrc, id, nom, strength, intelligence, luck, charisma, durability, life, armor, prix, rare, money) {
     var img = document.createElement('img');
     img.src = imgSrc;
     img.className = 'item-img';
@@ -13742,6 +14356,9 @@ window.createItem = function(type, imgSrc, id, nom, strength, durability, life, 
 
     // Attributs optionnels
     if (strength !== undefined) {img.setAttribute('data-strength', strength);}
+    if (intelligence !== undefined) {img.setAttribute('data-intelligence', intelligence);}
+    if (luck !== undefined) {img.setAttribute('data-luck', luck);}
+    if (charisma !== undefined) {img.setAttribute('data-charisma', charisma);}
     if (durability !== undefined) {img.setAttribute('data-durability', durability);}
     if (life !== undefined) {img.setAttribute('data-life', life);}
     if (armor !== undefined) {img.setAttribute('data-armor', armor);}
@@ -13789,9 +14406,19 @@ window.showTooltip = function(event, itemElement) {
 
   // Construit le contenu de la tooltip à partir des attributs de l'image
   let content = '';
+
   function addAttribute(label, attribute) {
     const value = itemElement.getAttribute(attribute);
-    if (value && value.trim() !== '' && value.toLowerCase() !== 'null') {
+    if (value === null || value === undefined) return;
+
+    const isNumeric = !isNaN(parseFloat(value));
+    const numericValue = parseFloat(value);
+
+    const shouldShow =
+      (isNumeric && numericValue !== 0) ||               // Nombres ≠ 0
+      (!isNumeric && value.trim() !== '' && value.toLowerCase() !== 'null'); // Texte non vide
+
+    if (shouldShow) {
       content += `<strong>${label}:</strong> ${value}<br>`;
     }
   }
@@ -13801,6 +14428,9 @@ window.showTooltip = function(event, itemElement) {
   addAttribute('Durability', 'data-durability');
   addAttribute('Life', 'data-life');
   addAttribute('Armor', 'data-armor');
+  addAttribute('Intelligence', 'data-intelligence');
+  addAttribute('Luck', 'data-luck');
+  addAttribute('Charisma', 'data-charisma');
   addAttribute('Prix', 'data-prix');
   addAttribute('Rare', 'data-rare');
   addAttribute('Money', 'data-money');
@@ -13906,6 +14536,9 @@ ingameSlots.forEach((ingameSlot, index) => {
                 ingameItem.getAttribute('data-id'),
                 ingameItem.getAttribute('data-nom'),
                 ingameItem.getAttribute('data-strength'),
+                ingameItem.getAttribute('data-intelligence'),
+                ingameItem.getAttribute('data-luck'),
+                ingameItem.getAttribute('data-charisma'),
                 ingameItem.getAttribute('data-durability'),
                 ingameItem.getAttribute('data-life'),
                 ingameItem.getAttribute('data-armor'),
@@ -13922,6 +14555,9 @@ ingameSlots.forEach((ingameSlot, index) => {
                 id: ingameItem.getAttribute('data-id'),
                 nom: ingameItem.getAttribute('data-nom'),
                 strength: ingameItem.getAttribute('data-strength'),
+                intelligence: ingameItem.getAttribute('data-intelligence'),
+                luck : ingameItem.getAttribute('data-luck'),
+                charisma : ingameItem.getAttribute('data-charisma'),
                 durability: ingameItem.getAttribute('data-durability'),
                 life: ingameItem.getAttribute('data-life'),
                 armor: ingameItem.getAttribute('data-armor'),
@@ -13949,6 +14585,9 @@ ingameSlots.forEach((ingameSlot, index) => {
                     id: item.getAttribute('data-id'),
                     nom: item.getAttribute('data-nom'),
                     strength: item.getAttribute('data-strength'),
+                    intelligence: item.getAttribute('data-intelligence'),
+                	luck : item.getAttribute('data-luck'),
+                	charisma: item.getAttribute('data-charisma'),
                     durability: item.getAttribute('data-durability'),
                     life: item.getAttribute('data-life'),
                     armor: item.getAttribute('data-armor'),
@@ -13972,6 +14611,9 @@ ingameSlots.forEach((ingameSlot, index) => {
                     id: item.getAttribute('data-id'),
                     nom: item.getAttribute('data-nom'),
                     strength: item.getAttribute('data-strength'),
+                    intelligence: item.getAttribute('data-intelligence'),
+                	luck : item.getAttribute('data-luck'),
+                	charisma: item.getAttribute('data-charisma'),
                     durability: item.getAttribute('data-durability'),
                     life: item.getAttribute('data-life'),
                     armor: item.getAttribute('data-armor'),
@@ -14200,18 +14842,20 @@ function mettreAJourStatsDepuisObjetsEquipes() {
     });
 
     // Ne PAS modifier le contenu texte visible : on le lit !
-    document.querySelectorAll('.stat-value').forEach(elementStat => {
-        const nomStat = elementStat.id.replace('-value', '');
+   document.querySelectorAll('.stat-value').forEach(elementStat => {
+    const nomStat = elementStat.id.replace('-value', '');
+    const base = parseInt(elementStat.getAttribute('data-valeur-de-base')) || 0;
+    const bonus = bonusEquipements[nomStat] || 0;
 
-        // Lire la valeur visible (stat du joueur)
-        const statBase = parseInt(elementStat.textContent) || 0;
-        const bonus = bonusEquipements[nomStat] || 0;
-        const total = statBase + bonus;
+    // Ajoute le bonus visuel à côté de la valeur
+    const bonusSpan = document.getElementById(`bonus-${nomStat}`);
+    if (bonusSpan) {
+        bonusSpan.textContent = bonus > 0 ? ` (+${bonus})` : "";
+    }
 
-        window[`$${nomStat}`] = total;
-
-
-    });
+    // Met à jour les valeurs JS globales
+    window[`$${nomStat}`] = base + bonus;
+});
 
        window.$totalArmor = bonusEquipements.armor;
 
@@ -15552,7 +16196,6 @@ input[type="checkbox"] {
 /* Curseurs de volume */
 input[type="range"] {
   width: 100%;
-  max-width: 200px;
   height: 6px;
   -webkit-appearance: none;
   background: linear-gradient(to right, #FFD700, #FF4500);
@@ -15618,6 +16261,7 @@ input[type="range"]::-moz-range-thumb {
 
 .autreParametre{
     display: flex;
+    width: 100%;
 	flex-wrap: wrap;
   	text-align:center;
     justify-content: center;
@@ -15629,6 +16273,56 @@ input[type="range"]::-moz-range-thumb {
     display: flex;
     justify-content: center;
 }
+.titre-options {
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.conteneur-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.options-colonne {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 280px;
+}
+
+.option-item,
+.option-item-son {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.option-item-son {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.panel-footer {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blockParametreBas{
+	width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
 
 /*! --- FIN Option --- */
 /*!---Choix Perso---*/
